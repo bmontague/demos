@@ -1,0 +1,15 @@
+{
+  "root": "libs/api/util-notifications",
+  "sourceRoot": "libs/api/util-notifications/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/util-notifications/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

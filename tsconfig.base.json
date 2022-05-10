@@ -14,7 +14,19 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "nx-demo/api/util-notifications": [
+        "libs/api/util-notifications/src/index.ts"
+      ],
+      "nx-demo/store/feature-game-detail": [
+        "libs/store/feature-game-detail/src/index.ts"
+      ],
+      "nx-demo/store/ui-shared": ["libs/store/ui-shared/src/index.ts"],
+      "nx-demo/store/util-formatters": [
+        "libs/store/util-formatters/src/index.ts"
+      ],
+      "nx-demo/util-interface": ["libs/util-interface/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
