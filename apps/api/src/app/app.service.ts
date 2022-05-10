@@ -36,14 +36,17 @@ export class AppService {
   getGame = (id: string) => games.find((game) => game.id = id);
 
 
-const connection = mysql.createConnection(
-{
-  host:'localhost',
-  user: "admin",
-  database: "project",
-  password: "mypassword", // sensitive
-  multipleStatements: true
-});
+  connection = () => {
+    mysql.createConnection(
+      {
+        host:'localhost',
+        user: "admin",
+        database: "project",
+        password: "mypassword", // sensitive
+        multipleStatements: true
+      }
+    )
+  }
 
-connection.connect();
+  connect = () => this.connection()
 }
