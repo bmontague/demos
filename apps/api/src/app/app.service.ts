@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Game } from 'nx-demo/util-interface';
+import { mysql } from 'mysql';
 
 const games: Game[] = [
   {
@@ -32,5 +33,20 @@ const games: Game[] = [
 @Injectable()
 export class AppService {
   getAllGames = () => games;
-  getGame = (id: string) => games.find((game) => game.id === id);
+  getGame = (id: string) => games.find((game) => game.id = id);
+
+
+  connection = () => {
+    mysql.createConnection(
+      {
+        host:'localhost',
+        user: "admin",
+        database: "project",
+        password: "mypassword", // sensitive
+        multipleStatements: true
+      }
+    )
+  }
+
+  connect = () => this.connection()
 }
